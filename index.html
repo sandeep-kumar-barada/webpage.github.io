@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sandeep Kumar Barada.com</title>
+    <!-- Meta Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A brief description of your site.">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Your Name | Personal Website" />
+    <meta property="og:description" content="A brief description of your site." />
+    <meta property="og:image" content="link-to-your-image.jpg" />
+    <meta property="og:url" content="https://yourwebsite.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- AOS Library CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <!-- Animate.css Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Three.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r136/three.min.js"></script>
+    <!-- OrbitControls -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r136/controls/OrbitControls.js"></script>
+    <!-- FontLoader and TextGeometry -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r136/loaders/FontLoader.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r136/geometries/TextGeometry.js"></script>
+</head>
+
+<body>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" title="Go to top">&#8679;</button>
+
+    <!-- 3D Animation Container -->
+    <div id="threejs-container"></div>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Sandeep Kumar Barada</h1>
+        <!-- Floating SVG Graphic -->
+        <svg class="floating-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+            <!-- Define the clip path -->
+            <clipPath id="circle-clip">
+                <circle cx="50" cy="50" r="40" />
+            </clipPath>
+            <!-- Image inside the circle, clipped to the circle shape -->
+            <image x="10" y="10" width="80" height="80" href="G:\sandeep's pic.jpeg" clip-path="url(#circle-clip)" />
+        </svg>
+
+
+        <!-- Navigation -->
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#academics">Academics</a></li>
+                <li><a href="#projects">My Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Get in Touch</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Me Section -->
+    <section id="about" data-aos="fade-up">
+        <h2>About Me</h2>
+        <p>Your introduction goes here. Share your story and passions.</p>
+    </section>
+
+    <!-- Academics Section -->
+    <section id="academics" data-aos="fade-up">
+        <h2>Academics</h2>
+        <div class="education">
+            <div class="edu-item" data-aos="fade-up">
+                <h3>Master of Science in Mathematics And Statistics</h3>
+                <p><strong>Indian Institute Of Technology, Tirupati</strong></p>
+                <p>Graduated: <strong>2026</strong></p>
+                <p>GPA: <strong>9.9/10.0</strong></p>
+                <p>Description: Completed coursework in algorithms, data structures, software engineering, and machine
+                    learning. Led a team project developing a web application for campus navigation.</p>
+            </div>
+            <!-- Add more edu-item blocks for additional education -->
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2 data-aos="fade-up">My Projects</h2>
+        <div class="project-list">
+            <!-- Project Item 1 -->
+            <div class="project-item" data-aos="zoom-in">
+                <h3>Project Title 1</h3>
+                <p>Brief description of your project.</p>
+                <a href="your-project-link" target="_blank">Learn More</a>
+            </div>
+            <!-- Project Item 2 -->
+            <div class="project-item" data-aos="zoom-in" data-aos-delay="100">
+                <h3>Project Title 2</h3>
+                <p>Brief description of your project.</p>
+                <a href="your-project-link" target="_blank">Learn More</a>
+            </div>
+            <!-- Add more project items as needed -->
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2 data-aos="fade-up">My Skills</h2>
+        <div class="skill" data-aos="fade-up">
+            <p>HTML</p>
+            <div class="skill-bar">
+                <div class="skill-level" style="--skill-level: 90%;"></div>
+            </div>
+        </div>
+        <div class="skill" data-aos="fade-up" data-aos-delay="100">
+            <p>CSS</p>
+            <div class="skill-bar">
+                <div class="skill-level" style="--skill-level: 85%;"></div>
+            </div>
+        </div>
+        <!-- Add more skills as needed -->
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" data-aos="fade-up">
+        <h2>Get in Touch</h2>
+        <p>I'm always open to connecting! Feel free to reach out via email or follow me on social media.</p>
+        <ul class="social-links">
+            <li><a href="mailto:youremail@example.com">Email Me</a></li>
+            <li><a href="your-linkedin-profile" target="_blank">LinkedIn</a></li>
+            <li><a href="your-github-profile" target="_blank">GitHub</a></li>
+            <!-- Add other social platforms as needed -->
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Sandeep Kumar Barada. All rights reserved.</p>
+    </footer>
+
+    <!-- AOS Library JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200, // Animation duration
+        });
+    </script>
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
