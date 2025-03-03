@@ -1,0 +1,487 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+body {
+    background: linear-gradient(to bottom, skyblue, lightblue);
+    /* Additional styles you might have */
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header h1 {
+    background-color: #837e7e;
+    /* Background color of the heading */
+    padding: 10px 20px;
+    /* Padding inside the heading */
+    border-radius: 15px;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Optional shadow for better effect */
+    display: inline-block;
+    /* Makes the border-radius work properly */
+    font-family: 'Roboto', sans-serif;
+    /* Font family */
+}
+
+header h1 {
+    font-size: 2em;
+    color: #433d3d;
+    /* Text color */
+    text-align: center;
+    /* Center text */
+    margin: 20px 0;
+    /* Margin around the heading */
+}
+
+/* Three.js Container Styling */
+#threejs-container {
+    width: 100%;
+    height: 20px;
+    /* Adjust height as needed */
+    overflow: hidden;
+    position: relative;
+}
+
+/* Animated Gradient Background for Header */
+header {
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+    background: linear-gradient(270deg, #ced0bd, #d5d8d1, #b7c393);
+    background-size: 600% 600%;
+    animation: gradientAnimation 10s ease infinite;
+}
+
+/* Add keyframes for gradient animation */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* @keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+} */
+
+/* Floating SVG Animation */
+.floating-svg {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 100px;
+    height: 100px;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Navigation Styling */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 20px;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+nav a:hover {
+    color: #e8ffe8;
+}
+
+nav a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Section Styling */
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards;
+    padding: 60px 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+section h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #4CAF50;
+}
+
+section p {
+    text-align: center;
+}
+
+/* Academics Section */
+.education {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.edu-item {
+    background-color: #f4f4f4;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.edu-item h3 {
+    margin-bottom: 10px;
+    color: #4CAF50;
+}
+
+.edu-item p {
+    margin-bottom: 8px;
+}
+
+.edu-item strong {
+    color: #333;
+}
+
+/* Project List Styling */
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-item {
+    position: relative;
+    overflow: hidden;
+    background-color: #f4f4f4;
+    margin: 10px;
+    padding: 20px;
+    width: calc(50% - 40px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(76, 175, 80, 0.2);
+    transform: skewX(-20deg);
+    transition: left 0.5s ease;
+}
+
+.project-item:hover {
+    transform: scale(1.02);
+}
+
+.project-item:hover::before {
+    left: 100%;
+}
+
+.project-item h3 {
+    margin-bottom: 10px;
+}
+
+.project-item p {
+    margin-bottom: 15px;
+}
+
+.project-item a {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.project-item a:hover {
+    background-color: #45a049;
+}
+
+/* Skills Section */
+.skill {
+    margin: 20px 0;
+}
+
+.skill p {
+    margin-bottom: 5px;
+}
+
+.skill-bar {
+    background-color: #ddd;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.skill-level {
+    height: 20px;
+    background-color: #4CAF50;
+    width: 0;
+    border-radius: 20px;
+    animation: fillSkill 2s forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes fillSkill {
+    to {
+        width: var(--skill-level, 80%);
+    }
+}
+
+/* Contact Section */
+.social-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-links li {
+    margin: 0 10px;
+}
+
+.social-links a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.social-links a:hover {
+    color: #388E3C;
+}
+
+/* Back to Top Button */
+#backToTop {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+#backToTop:hover {
+    background-color: #45a049;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project-item {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+}
+.edu-item {
+    background-color: #ffffff;
+    /* Background color of the box */
+    padding: 20px;
+    /* Padding inside the box */
+    border-radius: 15px;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Optional shadow for better effect */
+    margin-bottom: 20px;
+    /* Margin at the bottom of each item */
+}
+
+.edu-item h3 {
+    margin-top: 0;
+    /* Remove default margin at the top of heading */
+}
+
+.edu-item p {
+    margin: 5px 0;
+    /* Margin for paragraphs */
+}
+/* Common styles for all the sections */
+section {
+    background-color: #ffffff;
+    /* Background color of the box */
+    padding: 20px;
+    /* Padding inside the box */
+    border-radius: 15px;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Optional shadow for better effect */
+    margin: 20px auto;
+    /* Margin at the top and bottom */
+    max-width: 800px;
+    /* Maximum width to make the box smaller */
+}
+
+header h1 {
+    background-color: #ffffff;
+    /* Background color of the heading */
+    padding: 10px 20px;
+    /* Padding inside the heading */
+    border-radius: 15px;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Optional shadow for better effect */
+    display: inline-block;
+    /* Makes the border-radius work properly */
+    font-family: 'Roboto', sans-serif;
+    /* Font family */
+    font-size: 2em;
+    color: #333;
+    /* Text color */
+    text-align: center;
+    /* Center text */
+    margin: 20px 0;
+    /* Margin around the heading */
+}
+
+.social-links a {
+    background-color: #ffffff;
+    /* Background color of the links */
+    padding: 10px 20px;
+    /* Padding inside the links */
+    border-radius: 15px;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Optional shadow for better effect */
+    display: inline-block;
+    /* Makes the border-radius work properly */
+    margin: 5px;
+    /* Margin around each link */
+    text-decoration: none;
+    /* Remove underline from links */
+    color: #333;
+    /* Text color */
+}
+
+/* Specific styles for social links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    /* Space between links */
+}
+header {
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+    background: linear-gradient(270deg, rgba(206, 208, 189, 0.7), rgba(213, 216, 209, 0.7), rgba(183, 195, 147, 0.7)),
+        url('ssn.png') no-repeat center center;
+    background-size: cover;
+    background-blend-mode: overlay;
+    animation: gradientAnimation 10s ease infinite;
+}
+
+/* Add keyframes for gradient animation */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
